@@ -10,6 +10,11 @@ app.use(cors());
 
 const port = 5000;
 
+app.get("/", (req, res) =>{
+    res.send("Hello from db it's working")
+})
+
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.gadig.mongodb.net/emaJohnStore?retryWrites=true&w=majority`;
 
 
